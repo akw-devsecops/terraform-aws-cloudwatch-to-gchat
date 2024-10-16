@@ -1,0 +1,7 @@
+formatter: markdown
+
+output:
+  file: readme.md
+
+sort:
+  by: required
