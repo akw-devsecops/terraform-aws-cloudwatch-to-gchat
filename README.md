@@ -16,8 +16,8 @@ resource "aws_sns_topic" "example" {
 
 # Add sns subscription and google chat webhook as target
 module "cloudwatch_to_gchat" {
-  # For the latest version you can omit the tag "?ref=v3.0.0"
-  source = "git::ssh://git@bitbucket.sys.karcher.com/ksp/terraform-aws-cloudwatch-to-gchat.git?ref=v3.0.0"
+  source  = "akw-devsecops/cloudwatch-to-gchat/aws"
+  version = "1.0.0"
 
   env = "dev"
   
@@ -40,8 +40,8 @@ module "cloudwatch_to_gchat" {
 
 | Name | Version |
 |------|---------|
-| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 0.13 |
-| <a name="requirement_aws"></a> [aws](#requirement\_aws) | >= 4.47 |
+| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.5 |
+| <a name="requirement_aws"></a> [aws](#requirement\_aws) | >= 5.0 |
 
 ## Providers
 
